@@ -58,20 +58,20 @@
     }
 
     // [WIP]
-    _getResources() {
-      const request = new XMLHttpRequest();
-      request.open('GET', 'p15n/prefectures.json');
-      request.responseType = 'text';
-      request.send();
-
-      const deferred = this._defer();
-
-      request.onload = function() {
-        const jsonText = request.response;
-        deferred.resolve(JSON.parse(jsonText));
-      }
-      return deferred;
-    }
+    // _getResources() {
+    //   const request = new XMLHttpRequest();
+    //   request.open('GET', 'p15n/prefectures.json');
+    //   request.responseType = 'text';
+    //   request.send();
+    //
+    //   const deferred = this._defer();
+    //
+    //   request.onload = function() {
+    //     const jsonText = request.response;
+    //     deferred.resolve(JSON.parse(jsonText));
+    //   }
+    //   return deferred;
+    // }
 
     _defer() {
       let res;
