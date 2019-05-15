@@ -23,7 +23,9 @@
       this.fallbackPref = options.fallbackPref || '東京都';
       this.defaultPref = '東京都';
       this.resources = options.resources;
-      if (!this.resources) this._getResources().then((r) => this.resources = r);
+
+      // [WIP]
+      // if (!this.resources) this._getResources().then((r) => this.resources = r);
 
       const deferred = this._defer();
 
@@ -55,6 +57,7 @@
       return resource[key] && resource[key] !== undefined;
     }
 
+    // [WIP]
     _getResources() {
       const request = new XMLHttpRequest();
       request.open('GET', 'p15n/prefectures.json');
