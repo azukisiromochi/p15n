@@ -15,7 +15,8 @@ class P15n {
     this.pref = options.pref || '東京都';
     this.fallbackPref = options.fallbackPref || '東京都';
     this.defaultPref = '東京都';
-    this.resources = options.resources || {}; //TODO: JSONファイルを参照するように変更
+    this.resources = options.resources;
+    if (!this.resources) this._getResources().then((r) => this.resources = r);
 
     const deferred = this._defer();
 
@@ -45,6 +46,21 @@ class P15n {
     if (!resource) return false;
 
     return resource[key] && resource[key] !== undefined;
+  }
+
+  _getResources() {
+    const request = new XMLHttpRequest();
+    request.open('GET', 'p15n/prefectures.json');
+    request.responseType = 'text';
+    request.send();
+
+    const deferred = this._defer();
+
+    request.onload = function() {
+      const jsonText = request.response;
+      deferred.resolve(JSON.parse(jsonText));
+    }
+    return deferred;
   }
 
   _defer() {
