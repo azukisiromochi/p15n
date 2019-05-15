@@ -1,5 +1,5 @@
 # p15n.js
-p15n.jsとはPrefectureization（都道府県化）のことで、簡単に『方言』が使えるライブラリです。
+p15nとはPrefectureization（都道府県化）のことで、簡単に『方言』が使えるライブラリです。
 
 ## Installation
 

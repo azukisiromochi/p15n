@@ -1,0 +1,19 @@
+{
+  "name": "p15n.js",
+  "version": "1.0.0",
+  "description": "p15nとはPrefectureization（都道府県化）のことで、簡単に『方言』が使えるライブラリです。",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azukisiromochi/p15n.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "azukisiromochi (https://twitter.com/azukisiromochi)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azukisiromochi/p15n/issues"
+  },
+  "homepage": "https://github.com/azukisiromochi/p15n#readme"
+}
