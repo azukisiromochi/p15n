@@ -3,13 +3,13 @@ p15n.jsとはPrefectureization（都道府県化）のことで、簡単に『�
 
 ## Installation
 
-ブラウザから:
+##### ブラウザから:
 
 ```html
 <script src="p15n.js"></script>
 ```
 
-[WIP] npmを使う:
+##### [WIP] npmを使う:
 
 ```shell
 $ npm install p15n.js
@@ -17,7 +17,7 @@ $ npm install p15n.js
 
 ## Usage
 
-コールバック関数を渡す方法:
+##### コールバック関数を渡す方法:
 
 ```javascript
 import p15n from 'p15n';
@@ -37,7 +37,7 @@ p15n.init({
 });
 ```
 
-Promiseを使う方法:
+##### Promiseを使う方法:
 
 ```javascript
 import p15n from 'p15n';
@@ -57,7 +57,7 @@ p15n.init({
 });
 ```
 
-JSONファイルを使う方法:
+##### JSONファイルを使う方法:
 
 `p15n/prefectures.json` を用意し、次のように設定する。
 > ただし、 `p15n.init` で `resources` の指定がある場合は、そちらが優先される
