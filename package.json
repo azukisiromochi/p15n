@@ -1,6 +1,6 @@
 {
   "name": "p15n.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "p15nとはPrefectureization（都道府県化）のことで、簡単に『方言』が使えるライブラリです。",
   "main": "index.js",
   "repository": {
