@@ -24,9 +24,6 @@
       this.defaultPref = '東京都';
       this.resources = options.resources;
 
-      // [WIP]
-      // if (!this.resources) this._getResources().then((r) => this.resources = r);
-
       const deferred = this._defer();
 
       wait(0).then(() => {
@@ -56,22 +53,6 @@
 
       return resource[key] && resource[key] !== undefined;
     }
-
-    // [WIP]
-    // _getResources() {
-    //   const request = new XMLHttpRequest();
-    //   request.open('GET', 'p15n/prefectures.json');
-    //   request.responseType = 'text';
-    //   request.send();
-    //
-    //   const deferred = this._defer();
-    //
-    //   request.onload = function() {
-    //     const jsonText = request.response;
-    //     deferred.resolve(JSON.parse(jsonText));
-    //   }
-    //   return deferred;
-    // }
 
     _defer() {
       let res;
