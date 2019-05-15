@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <title>p15n.js example</title>
+    <script src="../p15n.js"></script>
+    <script>
+      p15n.init({
+        pref: '島根県',
+        fallbackPref: '鳥取県',
+        resources: {
+          '東京都': {
+            'title': 'p15nライブラリを作ってみました！　すごいでしょ！？',
+            'description': 'p15n.jsは、簡単に『方言』が使えるライブラリです。'
+          },
+          '鳥取県': {
+            'title': 'p15nライブラリを作ってみたにぃ！　すごいだらぁ！？',
+            'description': 'p15n.jsは簡単に『方言』が使えるライブラリだにぃ。'
+          },
+        }
+      }).then(() => {
+        document.getElementById('title').textContent = p15n.t('title');
+        document.getElementById('description').textContent = p15n.t('description');
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1 id="title">タイトル</h1>
+    <div id="description">説明</div>
+  </body>
+</html>
